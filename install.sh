@@ -8,7 +8,7 @@ cp .gitconfig ~/.gitconfig
 sudo apt install zsh --yes
 sudo chsh -s $(which zsh)
 echo "# empty .zshrc" >> ~/.zshrc
-zsh
+exec zsh
 
 # oh-my-zsh
 sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
