@@ -4,7 +4,7 @@ sudo apt update && sudo apt upgrade --yes
 
 cp .gitconfig ~/.gitconfig
 
-# # zsh
+# zsh
 sudo apt install zsh --yes
 sudo chsh -s $(which zsh)
 echo "# empty .zshrc" >> ~/.zshrc
