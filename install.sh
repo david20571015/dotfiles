@@ -6,12 +6,9 @@ cp .gitconfig ~/.gitconfig
 
 # zsh
 sudo apt install zsh --yes
-sudo chsh -s $(which zsh)
-echo "# empty .zshrc" >> ~/.zshrc
-zsh
 
 # oh-my-zsh
-sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -) --unattended --keep-zshrc"
 
 # powerlevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
@@ -23,8 +20,8 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 rm ~/.zshrc
-cd dotfiles
 cp .zshrc ~/.zshrc
 cp .p10k.zsh ~/.p10k.zsh
 
-source ~/.zshrc
+sudo chsh -s $(which zsh)
+exec zsh
