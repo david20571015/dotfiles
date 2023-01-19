@@ -7,6 +7,7 @@ cp .gitconfig ~/.gitconfig
 # # zsh
 sudo apt install zsh --yes
 sudo chsh -s $(which zsh)
+echo "# empty .zshrc" >> ~/.zshrc
 zsh
 
 # oh-my-zsh
